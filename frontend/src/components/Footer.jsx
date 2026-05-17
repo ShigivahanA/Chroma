@@ -82,7 +82,7 @@ const Footer = () => {
             to="/popular"
             className="font-sans text-[10px] sm:text-xs tracking-[0.25em] uppercase text-art-gray hover:text-art-teal transition-colors duration-300 font-bold"
           >
-            Gallery
+            Popular
           </Link>
           <Link
             to="/connect"
