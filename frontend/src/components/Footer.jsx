@@ -118,11 +118,16 @@ const Footer = () => {
       {/* Bottom Row: Micro Metadata & Copyright */}
       <div className="w-full max-w-[1400px] mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 pt-6 relative z-10">
 
-        {/* Micro Copyright */}
-        <div className="font-sans text-[9px] tracking-[0.25em] text-art-gray uppercase">
-          © {new Date().getFullYear()} CHROMA
+        {/* Micro Copyright & Preferences */}
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-sans text-[9px] tracking-[0.25em] text-art-gray uppercase">
+          <span>© {new Date().getFullYear()} CHROMA</span>
+          <button
+            onClick={() => window.dispatchEvent(new Event('open-cookie-settings'))}
+            className="hover:text-art-teal cursor-pointer transition-colors duration-200 uppercase font-sans text-[9px] tracking-[0.25em] bg-transparent border-none p-0 outline-none"
+          >
+            Cookie Preferences
+          </button>
         </div>
-
 
       </div>
 

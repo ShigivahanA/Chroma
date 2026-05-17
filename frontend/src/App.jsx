@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
+import CookieConsent from './components/CookieConsent';
 import Home from './pages/Home';
 import Popular from './pages/Popular';
 import Studio from './pages/Studio';
@@ -18,6 +19,7 @@ function App() {
       <Router>
         <div className="min-h-screen flex flex-col bg-art-white relative w-full overflow-x-clip">
           <Navbar />
+          <CookieConsent />
           
           <main className="flex-1 relative z-10 w-full">
             <Routes>
