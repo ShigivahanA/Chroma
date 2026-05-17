@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://chroma.app/</loc>
+    <loc>https://usechroma.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://chroma.app/popular</loc>
+    <loc>https://usechroma.vercel.app/popular</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chroma.app/studio</loc>
+    <loc>https://usechroma.vercel.app/studio</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chroma.app/lens</loc>
+    <loc>https://usechroma.vercel.app/lens</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chroma.app/contrast</loc>
+    <loc>https://usechroma.vercel.app/contrast</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chroma.app/morph</loc>
+    <loc>https://usechroma.vercel.app/morph</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chroma.app/connect</loc>
+    <loc>https://usechroma.vercel.app/connect</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

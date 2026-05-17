@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, path = '/', type = 'website' }) => {
   const siteName = 'Chroma';
-  const baseUrl = 'https://chroma.app';
+  const baseUrl = 'https://usechroma.vercel.app';
   const fullUrl = `${baseUrl}${path}`;
   const fullTitle = title ? `${title} — ${siteName}` : `${siteName} — Color Palette Generator & Curated Gallery`;
 

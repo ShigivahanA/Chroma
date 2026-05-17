@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /import
 
-Sitemap: https://chroma.app/sitemap.xml
+Sitemap: https://usechroma.vercel.app/sitemap.xml
