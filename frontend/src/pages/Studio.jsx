@@ -550,7 +550,7 @@ const Studio = () => {
         </motion.div>
 
         {/* Bottom bar details: Absolute-positioned HSL adjustment sliders (Zero layout shifting on unmount!) */}
-        <div className="absolute bottom-3.5 left-3.5 right-3.5 sm:bottom-5 sm:left-5 sm:right-5 z-20 sliders-container">
+        <div className="absolute bottom-2 left-2 right-2 sm:bottom-5 sm:left-5 sm:right-5 z-20 sliders-container">
           <AnimatePresence>
             {isThisHovered && (
               <motion.div
@@ -558,12 +558,12 @@ const Studio = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 15 }}
                 transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="w-full space-y-1 sm:space-y-1.5 bg-art-black/10 backdrop-blur-md p-1.5 sm:p-2 rounded-xl border border-current/10"
+                className="w-full space-y-2 sm:space-y-3 bg-art-black/10 backdrop-blur-md p-2 sm:p-3 rounded-xl border border-current/10"
                 style={{ color: color }}
               >
                 {/* Hue slider */}
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className={`text-[6px] sm:text-[7px] font-mono tracking-widest min-w-[20px] opacity-75 ${textClass}`}>HUE</span>
+                <div className="flex items-center gap-2 sm:gap-3 py-1">
+                  <span className={`text-[8px] sm:text-[9px] font-mono tracking-widest min-w-[24px] opacity-75 ${textClass}`}>HUE</span>
                   <input
                     type="range"
                     min="0"
@@ -571,15 +571,15 @@ const Studio = () => {
                     value={hsl.h}
                     onChange={(e) => handleSliderChange(idx, 'h', e.target.value)}
                     onClick={(e) => e.stopPropagation()}
-                    className={`flex-1 h-[1px] sm:h-[1.5px] appearance-none bg-current outline-none rounded cursor-pointer ${textClass}`}
-                    style={{ color: isLightColor ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.2)' }}
+                    className={`flex-1 w-full min-w-0 h-[2px] sm:h-[2.5px] appearance-none bg-current outline-none rounded cursor-pointer ${textClass}`}
+                    style={{ color: isLightColor ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.2)', width: '100%', minWidth: '0px' }}
                   />
-                  <span className={`text-[6px] sm:text-[7px] font-mono min-w-[24px] text-right opacity-75 ${textClass}`}>{hsl.h}°</span>
+                  <span className={`text-[8px] sm:text-[9px] font-mono min-w-[28px] text-right opacity-75 ${textClass}`}>{hsl.h}°</span>
                 </div>
 
                 {/* Saturation slider */}
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className={`text-[6px] sm:text-[7px] font-mono tracking-widest min-w-[20px] opacity-75 ${textClass}`}>SAT</span>
+                <div className="flex items-center gap-2 sm:gap-3 py-1">
+                  <span className={`text-[8px] sm:text-[9px] font-mono tracking-widest min-w-[24px] opacity-75 ${textClass}`}>SAT</span>
                   <input
                     type="range"
                     min="0"
@@ -587,15 +587,15 @@ const Studio = () => {
                     value={hsl.s}
                     onChange={(e) => handleSliderChange(idx, 's', e.target.value)}
                     onClick={(e) => e.stopPropagation()}
-                    className={`flex-1 h-[1px] sm:h-[1.5px] appearance-none bg-current outline-none rounded cursor-pointer ${textClass}`}
-                    style={{ color: isLightColor ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.2)' }}
+                    className={`flex-1 w-full min-w-0 h-[2px] sm:h-[2.5px] appearance-none bg-current outline-none rounded cursor-pointer ${textClass}`}
+                    style={{ color: isLightColor ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.2)', width: '100%', minWidth: '0px' }}
                   />
-                  <span className={`text-[6px] sm:text-[7px] font-mono min-w-[24px] text-right opacity-75 ${textClass}`}>{hsl.s}%</span>
+                  <span className={`text-[8px] sm:text-[9px] font-mono min-w-[28px] text-right opacity-75 ${textClass}`}>{hsl.s}%</span>
                 </div>
 
                 {/* Lightness slider */}
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className={`text-[6px] sm:text-[7px] font-mono tracking-widest min-w-[20px] opacity-75 ${textClass}`}>LGT</span>
+                <div className="flex items-center gap-2 sm:gap-3 py-1">
+                  <span className={`text-[8px] sm:text-[9px] font-mono tracking-widest min-w-[24px] opacity-75 ${textClass}`}>LGT</span>
                   <input
                     type="range"
                     min="0"
@@ -603,10 +603,10 @@ const Studio = () => {
                     value={hsl.l}
                     onChange={(e) => handleSliderChange(idx, 'l', e.target.value)}
                     onClick={(e) => e.stopPropagation()}
-                    className={`flex-1 h-[1px] sm:h-[1.5px] appearance-none bg-current outline-none rounded cursor-pointer ${textClass}`}
-                    style={{ color: isLightColor ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.2)' }}
+                    className={`flex-1 w-full min-w-0 h-[2px] sm:h-[2.5px] appearance-none bg-current outline-none rounded cursor-pointer ${textClass}`}
+                    style={{ color: isLightColor ? 'rgba(0,0,0,0.15)' : 'rgba(255,255,255,0.2)', width: '100%', minWidth: '0px' }}
                   />
-                  <span className={`text-[6px] sm:text-[7px] font-mono min-w-[24px] text-right opacity-75 ${textClass}`}>{hsl.l}%</span>
+                  <span className={`text-[8px] sm:text-[9px] font-mono min-w-[28px] text-right opacity-75 ${textClass}`}>{hsl.l}%</span>
                 </div>
               </motion.div>
             )}
