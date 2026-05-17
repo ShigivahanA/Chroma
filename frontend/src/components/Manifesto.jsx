@@ -4,20 +4,20 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-
 const statements = [
   {
     num: "01",
-    label: "Pure",
-    desc: "Color in its purest digital form.",
+    label: "Sensory",
+    desc: "Hear, see, and interact with colors in their purest digital form.",
     color: "#94C5CC"
   },
   {
     num: "02",
-    label: "Infinite",
-    desc: "An archive built for modern visual artists.",
+    label: "Harmonious",
+    desc: "Generate and analyze color palettes using human sight science and contrast rules.",
     color: "#B4D2E7"
   },
   {
     num: "03",
-    label: "Sanctuary",
-    desc: "A clean, quiet space to let the spectrum breathe.",
+    label: "Fluid",
+    desc: "A simple, quiet space to drag image pins, blend gradients, and build perfect palettes.",
     color: "#F8F8F8"
   }
 ];

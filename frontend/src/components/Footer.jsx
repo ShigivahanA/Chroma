@@ -79,6 +79,24 @@ const Footer = () => {
             Studio
           </Link>
           <Link
+            to="/lens"
+            className="font-sans text-[10px] sm:text-xs tracking-[0.25em] uppercase text-art-gray hover:text-art-teal transition-colors duration-300 font-bold"
+          >
+            Lens
+          </Link>
+          <Link
+            to="/contrast"
+            className="font-sans text-[10px] sm:text-xs tracking-[0.25em] uppercase text-art-gray hover:text-art-teal transition-colors duration-300 font-bold"
+          >
+            Contrast
+          </Link>
+          <Link
+            to="/morph"
+            className="font-sans text-[10px] sm:text-xs tracking-[0.25em] uppercase text-art-gray hover:text-art-teal transition-colors duration-300 font-bold"
+          >
+            Morph
+          </Link>
+          <Link
             to="/popular"
             className="font-sans text-[10px] sm:text-xs tracking-[0.25em] uppercase text-art-gray hover:text-art-teal transition-colors duration-300 font-bold"
           >
@@ -101,7 +119,7 @@ const Footer = () => {
       <div className="w-full max-w-[1400px] mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 pt-6 relative z-10">
 
         {/* Micro Copyright */}
-        <div className="font-sans text-[9px] tracking-[0.25em] text-art-gray/40 uppercase">
+        <div className="font-sans text-[9px] tracking-[0.25em] text-art-gray uppercase">
           © {new Date().getFullYear()} CHROMA
         </div>
 

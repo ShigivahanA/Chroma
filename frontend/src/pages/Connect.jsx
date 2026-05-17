@@ -35,6 +35,25 @@ const Connect = () => {
         path="/connect"
       />
 
+      {/* Floating Toast Notification */}
+      <AnimatePresence>
+        {(status === 'success' || status === 'error') && (
+          <motion.div
+            initial={{ opacity: 0, y: -20, x: "-50%", scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, x: "-50%", scale: 1 }}
+            exit={{ opacity: 0, y: -20, x: "-50%", scale: 0.95 }}
+            transition={{ type: "spring", damping: 25, stiffness: 350 }}
+            className={`fixed top-24 left-1/2 -translate-x-1/2 z-50 p-4 border-2 border-art-black rounded-xl font-mono text-[10px] uppercase tracking-wider font-extrabold shadow-[4px_4px_0px_0px_#000100] max-w-[280px] sm:max-w-xs text-center ${
+              status === 'success'
+                ? 'bg-[#94C5CC] text-art-black'
+                : 'bg-red-100 text-red-800'
+            }`}
+          >
+            {status === 'success' ? 'Message sent successfully ✓' : errorMessage}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="w-full max-w-5xl z-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
 
         {/* Left Side */}
@@ -50,29 +69,6 @@ const Connect = () => {
         {/* Right Side — Form */}
         <div className="w-full">
           <form onSubmit={handleSubmit} className="bg-art-white border-2 border-art-black rounded-2xl p-6 sm:p-8 space-y-5 shadow-[6px_6px_0px_0px_#000100]">
-
-            <AnimatePresence>
-              {status === 'error' && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  className="bg-red-50 text-red-700 text-xs font-mono p-3 border border-red-300 rounded-lg text-center"
-                >
-                  {errorMessage}
-                </motion.div>
-              )}
-              {status === 'success' && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  className="bg-art-teal/15 text-art-black text-xs font-mono p-3 border border-art-teal rounded-lg text-center font-bold uppercase tracking-widest"
-                >
-                  Message sent successfully ✓
-                </motion.div>
-              )}
-            </AnimatePresence>
 
             <div className="space-y-1.5">
               <label className="font-mono text-[10px] tracking-[0.15em] uppercase text-art-gray font-bold">Name</label>
@@ -113,9 +109,15 @@ const Connect = () => {
             <button
               type="submit"
               disabled={status === 'sending' || status === 'success'}
-              className="w-full py-3.5 bg-art-black text-art-white hover:bg-art-teal hover:text-art-black transition-all duration-300 rounded-lg font-sans text-xs tracking-[0.2em] font-black uppercase cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+              className="w-full py-3.5 bg-art-black text-art-white hover:bg-art-teal hover:text-art-black transition-all duration-300 rounded-lg font-sans text-xs tracking-[0.2em] font-black uppercase cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
-              {status === 'idle' || status === 'error' ? 'Send Message' : status === 'sending' ? 'Sending...' : 'Sent ✓'}
+              {status === 'idle' || status === 'error' ? (
+                'Send Message'
+              ) : status === 'sending' ? (
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              ) : (
+                'Sent ✓'
+              )}
             </button>
           </form>
         </div>

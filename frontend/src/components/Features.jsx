@@ -4,9 +4,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 const features = [
   {
     num: "01",
-    title: "Infinite Canvas",
-    subtitle: "Scale",
-    desc: "Every palette is meticulously generated through a highly-tuned algorithmic engine, ensuring absolute mathematical contrast across over 100 million permutations.",
+    title: "Creative Labs",
+    subtitle: "Creation",
+    desc: "Extract color palettes from images, test contrast readability under clear WCAG guidelines, and blend mathematically smooth gradients in CIE L*a*b* space with live synthesizer sounds.",
     bg: "#000100",
     accent: "#94C5CC",
   },
@@ -14,15 +14,15 @@ const features = [
     num: "02",
     title: "Zero Friction",
     subtitle: "Access",
-    desc: "An exhibition should never be locked away. No accounts. No paywalls. Pure, immediate, and frictionless access to the generative studio.",
+    desc: "No accounts. No paywalls. No popups. Jump directly into our advanced color design tools with immediate, frictionless access.",
     bg: "#94C5CC",
     accent: "#000100",
   },
   {
     num: "03",
-    title: "Global Archive",
-    subtitle: "Legacy",
-    desc: "A definitive global collection. Save your masterpieces to the gallery for the entire world to witness, curate, and utilize in their own creations.",
+    title: "Global Gallery",
+    subtitle: "Archive",
+    desc: "Save your favorite color palettes to our public directory, upvote creative swatches from the community, and clone designs back into your lab canvas.",
     bg: "#B4D2E7",
     accent: "#000100",
   }

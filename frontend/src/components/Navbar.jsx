@@ -163,19 +163,20 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ delay: 0.2, duration: 0.4 }}
-              className="absolute inset-0 z-50 flex flex-col items-center justify-center gap-8 pointer-events-auto mix-blend-difference"
+              className="absolute inset-0 z-50 flex flex-col items-center justify-center gap-6 sm:gap-8 md:grid md:grid-cols-2 md:gap-x-24 md:gap-y-10 md:place-content-center md:justify-items-center pointer-events-auto mix-blend-difference"
             >
               {navLinks.map((link, i) => (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="text-5xl md:text-7xl font-serif text-art-white hover:opacity-70 transition-opacity duration-300"
+                  onClick={handleToggle}
+                  className="text-5xl md:text-6xl lg:text-7xl font-serif text-art-white hover:opacity-70 transition-opacity duration-300 select-none"
                 >
                   <motion.span
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -20, opacity: 0 }}
-                    transition={{ delay: 0.3 + i * 0.1 }}
+                    transition={{ delay: 0.3 + i * 0.08 }}
                     className="block"
                   >
                     {link.name}
