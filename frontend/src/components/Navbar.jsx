@@ -109,9 +109,16 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Studio', path: '/studio' },
+    { name: 'Lens', path: '/lens' },
+    { name: 'Contrast', path: '/contrast' },
+    { name: 'Morph', path: '/morph' },
     { name: 'Popular', path: '/popular' },
     { name: 'Connect', path: '/connect' },
   ];
+
+  const isLensPage = location.pathname === '/lens';
+  const isContrastPage = location.pathname === '/contrast';
+  const isMorphPage = location.pathname === '/morph';
 
   return (
     <>
@@ -121,9 +128,13 @@ const Navbar = () => {
         transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
         className="fixed top-0 left-0 w-full p-6 sm:p-8 flex items-center justify-between z-50 mix-blend-difference text-art-white bg-transparent"
       >
-        <Link to="/" className="text-2xl font-serif italic tracking-wide">
-          chroma.
-        </Link>
+        {!(isLensPage || isContrastPage || isMorphPage) ? (
+          <Link to="/" className="text-2xl font-serif italic tracking-wide">
+            chroma.
+          </Link>
+        ) : (
+          <div />
+        )}
         <button
           onClick={handleToggle}
           className="w-10 h-10 flex flex-col items-center justify-center gap-1.5 z-50 focus:outline-none"

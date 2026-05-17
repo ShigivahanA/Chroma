@@ -7,6 +7,9 @@ import Popular from './pages/Popular';
 import Studio from './pages/Studio';
 import Import from './pages/Import';
 import Connect from './pages/Connect';
+import Lens from './pages/Lens';
+import Contrast from './pages/Contrast';
+import Morph from './pages/Morph';
 import './App.css';
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
               <Route path="/studio" element={<Studio />} />
               <Route path="/import" element={<Import />} />
               <Route path="/connect" element={<Connect />} />
+              <Route path="/lens" element={<Lens />} />
+              <Route path="/contrast" element={<Contrast />} />
+              <Route path="/morph" element={<Morph />} />
             </Routes>
           </main>
         </div>
